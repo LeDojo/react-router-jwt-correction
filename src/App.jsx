@@ -1,10 +1,10 @@
-import { Outlet, Link, Navigate, useNavigate } from "react-router-dom";
+import { Outlet, Link, useNavigate } from "react-router-dom";
 import "./App.css";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { AuthContext } from "./AuthContext";
 
 function App() {
-  const { logout, token, loading } = useContext(AuthContext);
+  const { logout, token } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const onLogout = () => {
